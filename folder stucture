@@ -1,0 +1,20 @@
+/airdrop_game
+├── /static
+│   ├── /css
+│   │   └── style.css            # CSS for styling the frontend
+│   ├── /js
+│   │   └── game.js              # JavaScript for frontend interactions (game logic)
+│   └── /images
+│       └── map.png              # Images for UI elements like maps, background
+├── /templates
+│   ├── index.html               # HTML for the game frontend
+│   ├── base.html                # Base template for reusable elements
+│   └── lobby.html               # Lobby page (player list, matchmaking)
+├── /models
+│   ├── game_model.py            # Database model for game logic (users, inventory, etc.)
+│   └── airdrop_model.py         # Airdrop and reward logic
+├── app.py                       # Main Flask app, backend game logic
+├── config.py                    # Configuration file (DB credentials, Flask settings)
+├── requirements.txt             # Python dependencies (Flask, SocketIO, etc.)
+├── README.md                    # GitHub repository description
+└── .gitignore                   # Git ignore file for not tracking unnecessary files
