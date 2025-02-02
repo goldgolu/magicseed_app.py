@@ -1,20 +1,29 @@
-/airdrop_game
-├── /static
-│   ├── /css
-│   │   └── style.css            # CSS for styling the frontend
-│   ├── /js
-│   │   └── game.js              # JavaScript for frontend interactions (game logic)
-│   └── /images
-│       └── map.png              # Images for UI elements like maps, background
-├── /templates
-│   ├── index.html               # HTML for the game frontend
-│   ├── base.html                # Base template for reusable elements
-│   └── lobby.html               # Lobby page (player list, matchmaking)
-├── /models
-│   ├── game_model.py            # Database model for game logic (users, inventory, etc.)
-│   └── airdrop_model.py         # Airdrop and reward logic
-├── app.py                       # Main Flask app, backend game logic
-├── config.py                    # Configuration file (DB credentials, Flask settings)
-├── requirements.txt             # Python dependencies (Flask, SocketIO, etc.)
-├── README.md                    # GitHub repository description
-└── .gitignore                   # Git ignore file for not tracking unnecessary files
+/magicseed_app.py/
+│
+├── app.py                    # Main Flask app script (aapka core backend code)
+├── config.py                 # Configuration file (for DB, secret keys, etc.)
+├── requirements.txt          # All dependencies (Flask, Flask-SocketIO, pymongo, etc.)
+├── /static                   # Static files like images, CSS, JS
+│   ├── /images               # For any static images (avatars, icons)
+│   ├── /js                   # Frontend JS (for game logic, socket connection)
+│   └── /css                  # Any custom styles (if you have specific styles for the game)
+│
+├── /templates                # HTML templates (for rendering dynamic content)
+│   ├── base.html             # Base template for common layout (navbar, footer)
+│   ├── index.html            # Main game entry page
+│   └── game_lobby.html       # Lobby screen for matchmaking
+│
+├── /models                   # Database models (MongoDB or MySQL)
+│   ├── user_model.py         # User-related database models (users, inventory)
+│   ├── bot_model.py          # AI bot functionalities (tasks, permissions, etc.)
+│   └── game_model.py         # Game-specific logic (matchmaking, airdrops)
+│
+├── /bot                      # AI bot related code (handling permissions, user problems)
+│   ├── bot.py                # Main AI bot logic (problem solving, permission requests)
+│   └── bot_tasks.py          # Additional bot tasks or helper functions
+│
+└── /utils                    # Utility files for helpers or common tasks
+    ├── airdrop.py            # Airdrop-related logic (generation, claims, etc.)
+    ├── permissions.py        # Permission management for bot and owner
+    └── game_utils.py         # Helper functions for game mechanics
+
